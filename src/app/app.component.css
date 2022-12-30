@@ -1,0 +1,20 @@
+.title-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    background: linear-gradient(to bottom right, var(--midnight-violet), var(--dark-violet));
+    border: solid;
+    color: var(--light-pink);
+    border-width: 0.5rem;
+    margin: 2rem;
+}
+.grid {
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    margin-inline: 3rem;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+}
