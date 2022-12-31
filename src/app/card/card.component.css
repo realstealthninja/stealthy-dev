@@ -17,11 +17,11 @@
 }
 
 .card > h2 {
-  box-shadow: rgb(var(--light-pink)) -0.3rem 0.3rem;
+  box-shadow: var(--light-pink) -0.3rem 0.3rem;
   background: linear-gradient(
     to bottom right,
-    var(--midnight-violet),
-    var(--dark-violet)
+    rgb(var(--midnight-violet)),
+    rgb(var(--dark-violet))
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,5 +30,5 @@
   -moz-text-fill-color: transparent;
 }
 .card > p {
-  color: var(--midnight-violet);
+  color: rgb(var(--midnight-violet));
 }
