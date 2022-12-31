@@ -11,9 +11,9 @@
   background-color: rgb(var(--dark-violet));
 }
 .card > img {
-    overflow-y:hidden;
-    width: 100%;
-    height: 100%;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .card > h2 {

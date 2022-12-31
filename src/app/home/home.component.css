@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 15rem;
-    background: linear-gradient(to bottom right, var(--midnight-violet), var(--dark-violet));
+    background: linear-gradient(to bottom right, rgba(var(--midnight-violet), 0.3), rgba(var(--dark-violet), 0.3));
     border: solid;
-    color: var(--light-pink);
+    color: rgb(var(--light-pink));
     border-width: 0.5rem;
     margin: 2rem;
 }
