@@ -6,9 +6,9 @@
   justify-content: center;
   align-items: center;
   outline: solid;
-  box-shadow: var(--midnight-violet) 1rem 1rem;
-  color: var(--midnight-violet);
-  background-color: var(--dark-violet);
+  box-shadow: rgb(var(--midnight-violet)) 1rem 1rem;
+  color: rgb(var(--midnight-violet));
+  background-color: rgb(var(--dark-violet));
 }
 .card > img {
     overflow-y:hidden;
@@ -17,7 +17,7 @@
 }
 
 .card > h2 {
-  box-shadow: var(--light-pink) -0.3rem 0.3rem;
+  box-shadow: rgb(var(--light-pink)) -0.3rem 0.3rem;
   background: linear-gradient(
     to bottom right,
     var(--midnight-violet),

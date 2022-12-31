@@ -1,7 +1,7 @@
 nav {
     margin:0px;
     padding:0px;
-    background-color: var(--midnight-violet);
+    background-color: rgb(var(--midnight-violet));
     width: 100vw;
     
 }
@@ -16,13 +16,13 @@ nav {
 .nav-items > * {
     cursor: pointer;
     transition: all ease 200ms ;
-    color: var(--light-pink);
+    color: rgb(var(--light-pink));
     display: inline-block;
     margin: .5rem;
     outline: solid;
     border-radius: 1rem;
     padding: .5rem;
-    outline-color: var(--dark-violet);
+    outline-color: rgb(var(--dark-violet));
 }
 .nav-items > *:hover {
     outline:double;
@@ -30,7 +30,7 @@ nav {
     outline-width: .8rem;
 }
 img:hover {
-    background-color: var(--midnight-violet);   
+    background-color: rgb(var(--midnight-violet));   
 }
 img {
     transition: all ease 200ms;
