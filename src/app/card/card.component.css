@@ -38,6 +38,7 @@
     rgb(var(--midnight-violet)),
     rgb(var(--dark-violet))
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-bottom: 0.5rem;
