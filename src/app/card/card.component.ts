@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -10,4 +10,12 @@ export class CardComponent {
   @Input() shortParagraph!: string;
   @Input() image!: string;
   @Input() icon!: string;
+  @Input() footer!: string;
+  @Input() link!: string;
+
+
+
+  onClick() {
+    location.href = this.link;
+  }
 }
