@@ -1,0 +1,9 @@
+header {
+    background-color: rgba(var(--dark-pink), .5);
+    margin: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    outline: solid;
+    outline-offset: .5rem;
+    color: rgba(var(--midnight-violet), 1);
+}
