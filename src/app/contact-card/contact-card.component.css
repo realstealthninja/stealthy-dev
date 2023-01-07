@@ -1,0 +1,37 @@
+.container {
+    color: rgba(var(--light-pink), .7);
+    background-color: rgba(var(--dark-violet), .4);
+    height: fill;
+    width: fill;
+    padding: 2rem;
+    text-align: center;
+    text-justify: center;
+    position: relative;
+    outline: solid;
+    cursor:pointer;
+    
+}
+
+h3:hover {
+    color: rgba(var(--midnight-violet), 1);
+}
+
+a > * {
+    display: inline-block;
+}
+.shadow {
+    position: absolute;
+    left: 3.5rem;
+    bottom: 1.5rem;
+    filter: blur(.7rem);
+    -webkit-filter: blur(.2rem)
+    
+}
+img {
+    position: relative;
+    opacity: .9;
+    float: left;
+    margin-right: 2rem;
+    width: 4rem;
+    height: 4rem;
+}
