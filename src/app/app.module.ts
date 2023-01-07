@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LinksComponent } from './links/links.component';
+import { ContactCardComponent } from './contact-card/contact-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LinksComponent } from './links/links.component';
     PageNotFoundComponent,
     HomeComponent,
     ProjectsComponent,
-    LinksComponent
+    LinksComponent,
+    ContactCardComponent
   ],
   imports: [
     BrowserModule,
