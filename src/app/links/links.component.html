@@ -1,1 +1,9 @@
-<p>links works!</p>
+<main>
+    <div class="grid-advanced">
+        <app-contact-card *ngFor="let link of links" 
+            [username]="link.username"
+            [link]="link.link"
+            [icon]="link.icon">
+        </app-contact-card>
+    </div>
+</main>
