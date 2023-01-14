@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import axios, { Axios } from 'axios';
-import Repo from './repo';
-import { repoService } from './repo.service';
+import { Component, OnInit } from "@angular/core";
+import axios, { Axios } from "axios";
+import Repo from "./repo";
+import { repoService } from "./repo.service";
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  selector: "app-projects",
+  templateUrl: "./projects.component.html",
+  styleUrls: ["./projects.component.css"],
 })
 export class ProjectsComponent implements OnInit {
   repos: Array<Repo> = [];
@@ -14,7 +14,6 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.service.getRepos().then((response) => {
       this.repos = response.data;
-
-    })
+    });
   }
 }

@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: "app-card",
+  templateUrl: "./card.component.html",
+  styleUrls: ["./card.component.css"],
 })
 export class CardComponent {
   @Input() title!: string;
@@ -12,8 +12,6 @@ export class CardComponent {
   @Input() icon!: string;
   @Input() footer!: string;
   @Input() link!: string;
-
-
 
   onClick() {
     location.href = this.link;

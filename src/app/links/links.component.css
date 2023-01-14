@@ -1,15 +1,14 @@
 .grid-advanced {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(2rem, 1fr));
-    margin: 2rem;
-    
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(2rem, 1fr));
+  margin: 2rem;
 }
 
 .grid-advanced > * {
-    transition: ease all 250ms;
+  transition: ease all 250ms;
 }
 .grid-advanced > *:hover {
-    grid-row: 2;
+  grid-row: 2;
 }

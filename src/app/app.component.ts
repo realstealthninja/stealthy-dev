@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<app-nav-bar></app-nav-bar>
     <router-outlet></router-outlet> `,
 })
 export class AppComponent {
-  title = 'stealthy-dev';
+  title = "stealthy-dev";
 }
