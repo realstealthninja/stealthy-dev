@@ -10,5 +10,6 @@
   transition: ease all 250ms;
 }
 .grid-advanced > *:hover {
-  grid-row: 2;
+  transform: scale(1.15);
+  color: rgba(var(--light-pink), 1);
 }
