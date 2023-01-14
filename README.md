@@ -1,4 +1,9 @@
 # StealthyDev
+Welcome to stealthy dev.
+Look around see if you like it.
+This is my first project in angular figuring out how things work.
+
+![](blob:https://vercel.com/27826ede-469f-44b1-a0bb-27b28f5fa05a)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
