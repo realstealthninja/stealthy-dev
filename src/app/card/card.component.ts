@@ -12,7 +12,7 @@ export class CardComponent {
   @Input() icon!: string;
   @Input() footer!: string;
   @Input() link!: string;
-
+  @Input() background!: string;
   onClick() {
     location.href = this.link;
   }
