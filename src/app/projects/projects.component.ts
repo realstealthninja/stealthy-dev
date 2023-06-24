@@ -13,7 +13,11 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getRepos().then((response) => {
-      this.repos = response.data;
+      response.data.forEach((repository: Repo) => {
+        if (repository.fork !== true) {
+          this.repos.push(repository);
+        }
+      });
     });
   }
 }
