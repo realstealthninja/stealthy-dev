@@ -20,8 +20,10 @@ html {
 .grid {
   align-items: center;
   justify-items: center;
-  gap: 5rem;
-  margin: 3rem;
+  gap: 4rem;
+  width: 100%;
+  height: 100%;
+  border: 0px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
