@@ -1,6 +1,7 @@
 <div class="card">
   <img *ngIf="image" src="{{ image }}" />
   <img *ngIf="icon" src="{{ icon }}" />
+  <img id="background" *ngIf="background" src="{{ background }}">
   <h2 *ngIf="title">{{ title }}</h2>
   <p *ngIf="shortParagraph">{{ shortParagraph }}</p>
   <b *ngIf="footer">{{ footer }}</b>
