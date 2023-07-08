@@ -11,7 +11,6 @@ import { HomeComponent } from "./home/home.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { LinksComponent } from "./links/links.component";
 import { ContactCardComponent } from "./contact-card/contact-card.component";
-import { GithubCardComponent } from './github-card/github-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { GithubCardComponent } from './github-card/github-card.component';
     ProjectsComponent,
     LinksComponent,
     ContactCardComponent,
-    GithubCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
