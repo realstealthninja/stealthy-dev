@@ -4,12 +4,12 @@
     <p>The countless amount of unfinished projects I've started.</p>
   </header>
   <div class="grid">
-    <app-github-card
+    <app-card
       *ngFor="let repo of repos"
-      [button]="'/'"
       [link]="repo.html_url"
+      [shortParagraph]="repo.description"
       [image]="'https://opengraph.githubassets.com/1/realstealthninja/' + repo.name"
     >
-    </app-github-card>
+    </app-card>
   </div>
 </main>
