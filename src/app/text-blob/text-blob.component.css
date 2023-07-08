@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+.text-blob{
+  font-family: 'VT323';
+  font-size: 1.5rem;
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  padding-inline: 10rem;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom right,
+    rgba(var(--midnight-violet), 0.8),
+    rgba(var(--dark-violet), 0.8)
+  );
+  border: solid;
+  color: rgb(var(--light-pink));
+  border-width: 0.5rem;
+  margin: 2rem;
+}
+
+a {
+  color: rgb(var(--midnight-violet));
+}
+a:hover {
+  color: rgb(var(--dark-violet));
+}
