@@ -1,5 +1,5 @@
 .title-logo {
-  font-size: 2rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,4 +13,9 @@
   color: rgb(var(--light-pink));
   border-width: 0.5rem;
   margin: 2rem;
+}
+@media screen and (min-width: 991px) {
+  .title-logo{
+    font-size: 2rem;
+  }
 }

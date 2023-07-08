@@ -5,7 +5,7 @@
   display: flex;
   text-align: justify;
   align-items: center;
-  padding-inline: 10rem;
+  padding-inline: 1rem;
   flex-direction: column;
   background: linear-gradient(
     to bottom right,
@@ -23,4 +23,10 @@ a {
 }
 a:hover {
   color: rgb(var(--dark-violet));
+}
+
+@media screen  and (min-width: 991px){
+  .text-blob{
+    padding-inline: 10rem;
+  }
 }
