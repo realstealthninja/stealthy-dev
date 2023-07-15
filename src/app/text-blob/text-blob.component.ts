@@ -1,4 +1,4 @@
-import { Component, Input,  } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -14,13 +14,14 @@ export class TextBlobComponent {
   sanitizedHtml: SafeHtml = "";
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
-
   ngOnInit(): void {
     this.http.get('assets/blog-text/' + this.content,
     {responseType: 'text'})
     .subscribe(data => {
+      this.title = RegExp(/^<meta +name="title" +content="([^"]+)" *\/>$/gm).exec(data)![1];
+      data.replace("<br>", "\n");
+      data.replace(/<(\/?).*>/gm, "");
       this.sanitizedHtml = this.sanitizer.bypassSecurityTrustHtml(data);
     })
-
   }
 }
