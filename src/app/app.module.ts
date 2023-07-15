@@ -12,6 +12,7 @@ import { ProjectsComponent } from "./projects/projects.component";
 import { LinksComponent } from "./links/links.component";
 import { ContactCardComponent } from "./contact-card/contact-card.component";
 import { TextBlobComponent } from './text-blob/text-blob.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TextBlobComponent } from './text-blob/text-blob.component';
     LinksComponent,
     ContactCardComponent,
     TextBlobComponent,
+    BlogsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
