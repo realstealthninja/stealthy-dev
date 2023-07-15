@@ -1,0 +1,38 @@
+.contents {
+    display:flex;
+    flex-direction: row;
+}
+nav {
+  height: 200vh;
+  background-color: rgb(var(--midnight-violet));
+}
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+.nav-items > * {
+  cursor: pointer;
+  transition: all ease 200ms;
+  color: rgb(var(--light-pink));
+  display: inline-block;
+  top:0;
+  margin: 0.5rem;
+  outline: solid;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  outline-color: rgb(var(--dark-violet));
+}
+.nav-items > *:hover {
+  outline: double;
+  outline-offset: -0.2rem;
+  outline-width: 0.8rem;
+}
+
+button {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+}
