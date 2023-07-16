@@ -2,7 +2,7 @@ module.exports = function(config) {
   config.set({
     browsers: ['Chrome','FirefoxHeadless'],
     customLaunchers: {
-      'FirefoxHeadless': {
+      FirefoxHeadless: {
         base: 'Firefox',
         flags: [
           '-headless',
