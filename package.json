@@ -6,8 +6,10 @@
     "start": "ng serve",
     "clean": "rimraf ./dist",
     "build": "ng build",
+    "build:ci": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=FirefoxHeadless",
     "prettier": "prettier --write src/**/*.{ts,js,css,html}",
     "lint": "ng lint"
   },
