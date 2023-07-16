@@ -1,14 +1,37 @@
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
-    browsers: ['Chrome','FirefoxHeadless'],
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
+      require('karma-firefox-launcher')
+    ],
+    client: {
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    },
+    coverageIstanbulReporter: {
+      dir: require('path').join(__dirname, './coverage/web'),
+      reports: ['html', 'lcovonly', 'text-summary'],
+      fixWebpackSourcePaths: true
+    },
+    reporters: ['progress', 'kjhtml'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['Chrome', 'FirefoxHeadless', 'FirefoxNightlyHeadless'],
     customLaunchers: {
       FirefoxHeadless: {
         base: 'Firefox',
-        flags: [
-          '-headless',
-        ],
-      }
+        flags: [ '-headless' ],
+      },
     },
-  }
-  )
-}
+    singleRun: false,
+    restartOnFileChange: true
+  });
+};
