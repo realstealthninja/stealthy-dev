@@ -1,11 +1,17 @@
-.contents {
-    display:flex;
-    flex-direction: row;
+main {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  min-height: 100%;
+  color: var(--text);
 }
+
 nav {
-  height: 200vh;
+  min-height: 100%;
   background-color: rgb(var(--midnight-violet));
+  min-width: 10rem;
 }
+
 .nav-items {
   display: flex;
   flex-direction: column;
@@ -13,26 +19,28 @@ nav {
   justify-content: center;
   padding-inline: 1rem;
 }
-.nav-items > * {
+
+.nav-items>* {
   cursor: pointer;
   transition: all ease 200ms;
   color: rgb(var(--light-pink));
   display: inline-block;
-  top:0;
+  top: 0;
   margin: 0.5rem;
   outline: solid;
   border-radius: 1rem;
   padding: 0.5rem;
   outline-color: rgb(var(--dark-violet));
 }
-.nav-items > *:hover {
+
+.nav-items>*:hover {
   outline: double;
   outline-offset: -0.2rem;
   outline-width: 0.8rem;
 }
 
 button {
-    background-color: transparent;
-    padding: 0px;
-    margin: 0px;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
 }
