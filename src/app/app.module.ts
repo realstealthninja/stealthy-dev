@@ -11,8 +11,9 @@ import { HomeComponent } from "./home/home.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { LinksComponent } from "./links/links.component";
 import { ContactCardComponent } from "./contact-card/contact-card.component";
-import { TextBlobComponent } from './text-blob/text-blob.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { WhyStealthyDevComponent } from './blogs/why-stealthy-dev/why-stealthy-dev.component';
+import { MyTimeAtGbotComponent } from './blogs/my-time-at-gbot/my-time-at-gbot.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,12 @@ import { BlogsComponent } from './blogs/blogs.component';
     ProjectsComponent,
     LinksComponent,
     ContactCardComponent,
-    TextBlobComponent,
     BlogsComponent,
+    WhyStealthyDevComponent,
+    MyTimeAtGbotComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

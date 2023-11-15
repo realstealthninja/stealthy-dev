@@ -6,13 +6,20 @@ import { HomeComponent } from "./home/home.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { LinksComponent } from "./links/links.component";
 import { BlogsComponent } from "./blogs/blogs.component";
+import { WhyStealthyDevComponent } from "./blogs/why-stealthy-dev/why-stealthy-dev.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "about", component: AboutComponent },
   { path: "projects", component: ProjectsComponent },
   { path: "contact", component: LinksComponent },
-  { path: "blogs", component: BlogsComponent},
+  {
+    path: "blogs",
+    component: BlogsComponent,
+    children: [
+      { path: "why-stealthy-dev", component: WhyStealthyDevComponent },
+    ]
+  },
   { path: "**", component: PageNotFoundComponent },
 ];
 
@@ -21,4 +28,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule { }
