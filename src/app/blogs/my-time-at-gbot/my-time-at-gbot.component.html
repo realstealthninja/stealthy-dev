@@ -1,1 +1,46 @@
-<p>my-time-at-gbot works!</p>
+<section class="blog">
+    <header>
+        <h3>Robotics an art worth the money</h3>
+    </header>
+    <p>
+        Its quite interesting that i've never really considered robotics my whole life until the day i got the
+        opportunity to do a workshop with the G-Bot team from <a href="https://www.gecwyd.ac.in/">Kalpetta Engineering
+            college</a>.
+        We were teamed based on our schools, So i was teamed with my class mate. I arrived early to setup our linux box
+        and installed arduino IDE. Did I mention that we were working with <a
+            href="https://www.arduino.cc/">Arduinos</a>&ThickSpace; <em> very exciting</em>.
+        <br />
+        <br />
+    <figure>
+        <img src="https://docs.arduino.cc/static/bbceab04f8e0726194ef4dfe2457097f/image.svg"
+            alt="a diagram of an arduino uno R3" width="150" height="150" />
+        <figcaption>
+            This lil tiny board can do so many cool things.
+            point your attention to the Chip. That's a ATmega328P right there.
+        </figcaption>
+    </figure>
+    We sat at the very back, and the workshop had began with bang. They introduced us to the arduino showing us how it
+    worked and doing some basic things like lighting an onboard LED of the Arduino. The arduinos worked on variant of
+    C++, i prefer to call it embeded C but that's probably <em> Very wrong</em>.
+    There are 14 digital pins on an arduino board they output/input ones and zeros and 6 analog pins which input/output
+    a range of values most likely from 0-1024 why? because the chip has processor for analog I/O operations which
+    converts the physical electric signals into ones and zeros. Here is the code for lighting an LED
+    </p>
+    <pre>
+    <code class="language-arduino">
+/**
+ * @brief Lights the LED with the given pin number
+ */
+void light_led(int num)&lcub;
+  digitalWrite(num + 3, HIGH); 
+  delay(num * 2000);
+  digitalWrite(num + 3, LOW);
+&rcub;
+    </code>
+</pre>
+    <br />
+    <br />
+    <p>
+
+    </p>
+</section>

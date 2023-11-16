@@ -7,6 +7,7 @@ import { ProjectsComponent } from "./projects/projects.component";
 import { LinksComponent } from "./links/links.component";
 import { BlogsComponent } from "./blogs/blogs.component";
 import { WhyStealthyDevComponent } from "./blogs/why-stealthy-dev/why-stealthy-dev.component";
+import { MyTimeAtGbotComponent } from "./blogs/my-time-at-gbot/my-time-at-gbot.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
     component: BlogsComponent,
     children: [
       { path: "why-stealthy-dev", component: WhyStealthyDevComponent },
+      { path: "my-time-at-gbot", component: MyTimeAtGbotComponent },
     ]
   },
   { path: "**", component: PageNotFoundComponent },

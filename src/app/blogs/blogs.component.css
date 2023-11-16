@@ -7,7 +7,7 @@ main {
 }
 
 nav {
-  min-height: 100%;
+  min-height: 100vh;
   background-color: rgb(var(--midnight-violet));
   min-width: 10rem;
 }
