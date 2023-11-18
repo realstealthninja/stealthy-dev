@@ -1,9 +1,9 @@
 <section class="blog">
     <header>
-        <h3>Robotics an art worth the money</h3>
+        <h2>Robotics an art worth the money</h2>
     </header>
     <p>
-        Its quite interesting that i've never really considered robotics my whole life until the day i got the
+        Its quite interesting that i've never really considered robotics until I got an
         opportunity to do a workshop with the G-Bot team from <a href="https://www.gecwyd.ac.in/">Kalpetta Engineering
             college</a>.
         We were teamed based on our schools, So i was teamed with my class mate. I arrived early to setup our linux box
@@ -24,23 +24,47 @@
     C++, i prefer to call it embeded C but that's probably <em> Very wrong</em>.
     There are 14 digital pins on an arduino board they output/input ones and zeros and 6 analog pins which input/output
     a range of values most likely from 0-1024 why? because the chip has processor for analog I/O operations which
-    converts the physical electric signals into ones and zeros. Here is the code for lighting an LED
+    converts the physical electric signals into ones and zeros.
     </p>
-    <pre>
-    <code class="language-arduino">
+    <h4>What does a arduino file look like?</h4>
+
+    <p>
+        Good question! An arduino is coded using a file with an extension of .ino usually named something like
+        sketch&LeftAngleBracket;somenumber&RightAngleBracket;.ino which has two parts a <em>setup function</em> and a
+        <em>loop function</em>.
+        The setup function runs the code inside only ONCE and the loop function as you've guessed it runs it in a loop
+        until the end of time or until you power the arduino off.
+    </p>
+    <textarea highlight-js [lang]="'arduino'">
 /**
- * @brief Lights the LED with the given pin number
+ * sketch.ino
  */
-void light_led(int num)&lcub;
-  digitalWrite(num + 3, HIGH); 
-  delay(num * 2000);
-  digitalWrite(num + 3, LOW);
-&rcub;
-    </code>
-</pre>
+
+void setup() {
+    // runs once
+}
+
+void loop() {
+    // runs forever
+}
+    </textarea>
+    <p>
+        Here is the code for lighting an LED
+    </p>
+    <textarea highlight-js [options]="{}" [lang]="'arduino'">
+/**
+* @brief Lights the LED with the given pin number
+*/
+
+void light_led(int num) {
+    digitalWrite(num + 3, HIGH);
+    delay(num * 2000);
+    digitalWrite(num + 3, LOW);
+}
+    </textarea>
     <br />
     <br />
     <p>
-
+        hi
     </p>
 </section>
