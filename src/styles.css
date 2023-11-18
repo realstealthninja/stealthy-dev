@@ -3,8 +3,10 @@
   border: none;
   padding: 0px;
   margin: 0px;
-  --primary: #432a62;
-  --accent: #c5af63;
+  --background: #432a62;
+  --accent: #e8d5b5;
+  --primary: #ca90ff;
+  --secondary: #fffade;
   --text: #efb8e0;
   --midnight-violet: 45, 3, 59;
   --dark-violet: 129, 12, 168;
@@ -49,16 +51,15 @@ button {
   margin: 2rem;
   padding: 2rem;
   border: solid 0.255rem;
+  background-color: rgba(67, 42, 98, 0.50);
+  color: var(--text);
 }
 
 .blog>p>a {
-  color: green;
+  color: var(--primary);
   text-decoration: underline;
 }
 
-.blog>header>h3 {
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: purple;
-  text-decoration-style: wavy;
+.blog>header>h2 {
+  text-align: center;
 }
