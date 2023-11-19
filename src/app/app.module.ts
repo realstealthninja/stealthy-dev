@@ -15,7 +15,6 @@ import { ContactCardComponent } from "./contact-card/contact-card.component";
 import { BlogsComponent } from './blogs/blogs.component';
 import { WhyStealthyDevComponent } from './blogs/why-stealthy-dev/why-stealthy-dev.component';
 import { MyTimeAtGbotComponent } from './blogs/my-time-at-gbot/my-time-at-gbot.component';
-import { SyntaxHighlightComponent } from './syntax-highlight/syntax-highlight.component';
 
 @NgModule({
   declarations: [
