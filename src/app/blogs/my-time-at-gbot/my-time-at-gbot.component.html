@@ -19,13 +19,16 @@
             point your attention to the Chip. That's a ATmega328P right there.
         </figcaption>
     </figure>
-    We sat at the very back, and the workshop had began with bang. They introduced us to the arduino showing us how it
-    worked and doing some basic things like lighting an onboard LED of the Arduino. The arduinos worked on variant of
-    C++, i prefer to call it embeded C but that's probably <em> Very wrong</em>.
-    There are 14 digital pins on an arduino board they output/input ones and zeros and 6 analog pins which input/output
-    a range of values most likely from 0-1024 why? because the chip has processor for analog I/O operations which
-    converts the physical electric signals into ones and zeros.
-    </p>
+    They introduced us to Arduino, A single board micro-controller. basically a programmable PCB. An arduino works on
+    variant of
+    C. I prefer to call it embeded C but that's probably <em> Very wrong</em>.
+    There are 14 digital pins and 6 analog pins. Whats the difference?
+    A digital pin is digital meaning it can input or output a fixed value in the form of a square wave; Either 0 or 1
+    (on or off or high or low). While an analog pin can input a wide range of values in the form of a sine wave think of
+    it was values from 0 to 1 (eg: 0.34). An arduino is a digital board and cant directly input or ouput analog values
+    thus it must covert it to digital in the case of input or convert from digital to analog in the case of output.
+    Luckily the board's chip the ATmega328P has builtin functionality of converting to and from analog. This results
+    values to be displayed in 10 bits that is 0-1024</p>
     <h4>What does a arduino file look like?</h4>
 
     <p>
@@ -40,6 +43,7 @@
  * sketch.ino
  */
 
+
 void setup() {
     // runs once
 }
@@ -49,12 +53,32 @@ void loop() {
 }
     </textarea>
     <p>
-        Here is the code for lighting an LED
+        If you look carefully you'll see a tiny LED on the 13th pin. You might be wondering how we even begin to light
+        it. Well it starts off by setting how the pin should operate. Since a LED is usually either on or off we connect
+        it to a Digital pin. Now we must inform the board that we are trying to OUTPUT a signal to pin 13. Hence we
+        must set the mode of the pin to "OUTPUT" using the built in function called pinMode
     </p>
     <textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
-* @brief Lights the LED with the given pin number
-*/
+ * setting pinmode to OUTPUT
+ */
+void setup() {
+    pinMode(13, OUTPUT);
+}
+
+void loop() {
+    // Turn the LED on
+    digitalWrite(13, HIGH); 
+}
+    </textarea>
+    <p>
+        To send an ON signal to that pin we use the builtin function called "digitalWrite" in our loop to turn it and
+        make it stay on forever.
+    </p>
+    <textarea highlight-js [options]="{}" [lang]="'arduino'">
+/**
+ * @brief Lights the LED with the given pin number
+ */
 
 void light_led(int num) {
     digitalWrite(num + 3, HIGH);
