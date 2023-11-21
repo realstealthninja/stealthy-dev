@@ -44,3 +44,16 @@ button {
   padding: 0px;
   margin: 0px;
 }
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+
+  nav {
+    min-height: 10vh;
+    flex-shrink: initial;
+    flex-direction: row;
+  }
+
+}
