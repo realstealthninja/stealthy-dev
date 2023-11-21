@@ -37,8 +37,8 @@
         <em>loop function</em>.
         The setup function runs the code inside only ONCE and the loop function as you've guessed it runs it in a loop
         until the end of time or until you power the arduino off.
-    </p>
-    <textarea highlight-js [lang]="'arduino'">
+
+        <textarea highlight-js [lang]="'arduino'">
 /**
  * sketch.ino
  */
@@ -52,13 +52,13 @@ void loop() {
     // runs forever
 }
     </textarea>
-    <p>
+
         If you look carefully you'll see a tiny LED on the 13th pin. You might be wondering how we even begin to light
         it. Well it starts off by setting how the pin should operate. Since a LED is usually either on or off we connect
         it to a Digital pin. Now we must inform the board that we are trying to OUTPUT a signal to pin 13. Hence we
         must set the mode of the pin to "OUTPUT" using the built in function called pinMode
-    </p>
-    <textarea highlight-js [options]="{}" [lang]="'arduino'">
+
+        <textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
  * setting pinmode to OUTPUT
  */
@@ -71,7 +71,7 @@ void loop() {
     digitalWrite(13, HIGH); 
 }
     </textarea>
-    <p>
+
         To send an ON signal to that pin we use the builtin function called "digitalWrite" in our loop to turn it and
         make it stay on forever.
 
