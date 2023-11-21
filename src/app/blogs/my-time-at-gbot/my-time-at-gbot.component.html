@@ -74,21 +74,37 @@ void loop() {
     <p>
         To send an ON signal to that pin we use the builtin function called "digitalWrite" in our loop to turn it and
         make it stay on forever.
-    </p>
-    <textarea highlight-js [options]="{}" [lang]="'arduino'">
+
+        To blink a given led you must add a delay.
+        a delay works as follows, it asks the board to wait a while before executing the other code. For example if you
+        wanted to turn off the LED you might try to
+        add <textarea highlight-js [lang]="'arduino'">digitalWrite(13, LOW);</textarea> which would blink the LED yes
+        but it would be invisible as it is in a loop it blinks at microsecond intervals basically per cpu clock. To
+        avoid this we use a delay so the code gets a chance to be executed and waits a bit before executing the other
+        parts. For ease of access i have moved this to a tiny function
+
+        <textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
  * @brief Lights the LED with the given pin number
+ * @param num the pin number to light
+ * @param delay in seconds
  */
+void light_led(int num, int delay) {
+    // turn on the LED
+    digitalWrite(num, HIGH);
+    // wait until a time delay
+    delay(delay * 1000); // * 1000 to convert second to millisecond
+    // turn off the LED
+    digitalWrite(num, LOW);
+}
 
-void light_led(int num) {
-    digitalWrite(num + 3, HIGH);
-    delay(num * 2000);
-    digitalWrite(num + 3, LOW);
+void loop() {
+    light_led(13);
 }
     </textarea>
-    <br />
-    <br />
-    <p>
+        <br />
+        <br />
+
         hi
     </p>
 </section>
