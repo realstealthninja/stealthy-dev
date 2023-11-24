@@ -15,6 +15,7 @@ import { ContactCardComponent } from "./contact-card/contact-card.component";
 import { BlogsComponent } from './blogs/blogs.component';
 import { WhyStealthyDevComponent } from './blogs/why-stealthy-dev/why-stealthy-dev.component';
 import { MyTimeAtGbotComponent } from './blogs/my-time-at-gbot/my-time-at-gbot.component';
+import { InabilityToCompleteComponent } from './blogs/inability-to-complete/inability-to-complete.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MyTimeAtGbotComponent } from './blogs/my-time-at-gbot/my-time-at-gbot.c
     BlogsComponent,
     WhyStealthyDevComponent,
     MyTimeAtGbotComponent,
+    InabilityToCompleteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, HighlightJsModule],
   providers: [],
