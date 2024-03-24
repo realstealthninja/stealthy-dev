@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextBlobComponent } from './text-blob.component';
+import { MyTimeAtGbotComponent } from './my-time-at-gbot.component';
 
-describe('TextBlobComponent', () => {
-  let component: TextBlobComponent;
-  let fixture: ComponentFixture<TextBlobComponent>;
+describe('MyTimeAtGbotComponent', () => {
+  let component: MyTimeAtGbotComponent;
+  let fixture: ComponentFixture<MyTimeAtGbotComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TextBlobComponent ]
+      declarations: [ MyTimeAtGbotComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TextBlobComponent);
+    fixture = TestBed.createComponent(MyTimeAtGbotComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
