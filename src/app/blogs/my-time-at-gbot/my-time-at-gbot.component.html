@@ -31,7 +31,7 @@
     values to be displayed in 10 bits that is 0-1024</p>
     <h4>What does a arduino file look like?</h4>
 
-    <p>
+<p>
         Good question! An arduino is coded using a file with an extension of .ino usually named something like
         sketch&LeftAngleBracket;somenumber&RightAngleBracket;.ino which has two parts a <em>setup function</em> and a
         <em>loop function</em>.
@@ -58,7 +58,7 @@ void loop() {
         it to a Digital pin. Now we must inform the board that we are trying to OUTPUT a signal to pin 13. Hence we
         must set the mode of the pin to "OUTPUT" using the built in function called pinMode
 
-        <textarea highlight-js [options]="{}" [lang]="'arduino'">
+<textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
  * setting pinmode to OUTPUT
  */
@@ -70,7 +70,7 @@ void loop() {
     // Turn the LED on
     digitalWrite(13, HIGH); 
 }
-    </textarea>
+</textarea>
 
         To send an ON signal to that pin we use the builtin function called "digitalWrite" in our loop to turn it and
         make it stay on forever.
@@ -81,9 +81,9 @@ void loop() {
         add <textarea highlight-js [lang]="'arduino'">digitalWrite(13, LOW);</textarea> which would blink the LED yes
         but it would be invisible as it is in a loop it blinks at microsecond intervals basically per cpu clock. To
         avoid this we use a delay so the code gets a chance to be executed and waits a bit before executing the other
-        parts. For ease of access i have moved this to a tiny function
+        parts. For ease of access I have moved this to a tiny function
 
-        <textarea highlight-js [options]="{}" [lang]="'arduino'">
+<textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
  * @brief Lights the LED with the given pin number
  * @param num the pin number to light
@@ -101,10 +101,142 @@ void light_led(int num, int delay) {
 void loop() {
     light_led(13);
 }
-    </textarea>
-        <br />
-        <br />
+</textarea>
+</p>
+<h4>Potentiometers</h4>
+<p>
+    While looking at LEDs we were introduced a new component potentiometers <em>fancy!</em>
+    Potentiometers simply put are variable resistors. The one they showed us was a 10k ohm
+    potentiometer. The working of a potentiometer is quite elegant in my opinion. 
+    There is a conductive track and wiper, as the wiper rotates the resistance varies
+    as you know length is proportional to resistance, by varing the lenght of the conductive track using the pin you decrease / increase the resistance! <em>How cool!!!</em>
+    <figure>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210919142132/PSX20210919141957.jpg" alt="diagram of potentiometer" width="250"  >
+        <figcaption><cite>potentiometer diagram</cite> from geeksforgeeks.org</figcaption>
+    </figure>
+</p>
+        <h4>Motors, Motor controllers</h4>
+        <p>After a brief lunch break we were tasked with creating a little car thing. It was a simple enough project because they had already done most of the wiring and left us with the coding. Since now you all are experts in doing embedded c. I'll leave you with the entire file
+<textarea highlight-js [options]="{}" [lang]="'arduino'">
+/**
+ * @file
+ * @brief programmable car
+ * @description
+ * These files were coded during the Gbot Robotics workshop.
+ * Minimal adjustments were made after the workshop to document the structure
+  */
+   
+// Define the pin numbers
+int L = 11; ///< Left motor's forward pin
+int L2 = 10; ///< Left motor's backward pin
+int R = 8; ///< Right motor's forward pin
+int R2 = 9; ///< Right motor's backward pin
 
-        hi
-    </p>
+int speed_L = 6;
+int speed_R = 5;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  for(int i=8; i<12; i++) {
+    pinMode(i, OUTPUT);
+  }
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  speed(128);
+}
+
+void loop() {
+  // put your main code here, to run repeated
+  forward(1000);
+  left(2);
+  forward(1000);
+}
+
+/**
+ * @brief Drives the car forward
+ * @param time specifies how long the car should go forward for
+ */
+void forward(int time) {
+  digitalWrite(L, HIGH);
+  digitalWrite(L2, LOW);
+  digitalWrite(R, HIGH);
+  digitalWrite(R2, LOW);
+  delay(time);  
+}
+
+
+/**
+ * @brief Turn the car to the left
+ * @param time specifies how long the car should go left for
+*/
+void left(int time) {
+  digitalWrite(L, HIGH);
+  digitalWrite(L2, LOW);
+  delay(time);
+}
+
+
+/**
+ * @brief Turn the car to the right
+ * @param time specifies how long the car should go right for
+ */
+void right(int time) {
+  digitalWrite(R, HIGH);
+  digitalWrite(R2, LOW);
+  delay(time);
+}
+
+/**
+ * @brief Turn the car sharply to the left
+ * @param time specifies how long the car should go left for
+ */
+void sharp_left(int time) {
+  digitalWrite(L, HIGH);
+  digitalWrite(L2, LOW);
+  digitalWrite(R2, HIGH);
+  digitalWrite(R, LOW);
+  delay(time);
+}
+
+/**
+ * @brief Turn the car sharply to the right
+ * @param time specifies how long the car should go right for
+ */
+void sharp_right(int time) {
+  digitalWrite(L2, HIGH);
+  digitalWrite(L, LOW);
+  digitalWrite(R, HIGH);
+  digitalWrite(R2, LOW);
+  delay(time);
+}
+
+/**
+ * @brief Speed of the car
+ * @param speed specifes the speed of the car
+ */
+void speed(int speed) {
+  analogWrite(speed_L, speed);
+  analogWrite(speed_R, speed);
+}
+
+/**
+ * @brief Drives the car forward
+ * @param time specifies how long the car should go forward for
+ */
+void backward(int time) {
+  digitalWrite(L2, HIGH);
+  digitalWrite(L, LOW);
+  digitalWrite(R2, HIGH);
+  digitalWrite(R, LOW);
+  delay(time);
+}
+    </textarea>
+</p>
+<h4>Thank you for reading!</h4>
+<p>I wish I could go more indepth but this blog has been in the works since last year (2023).
+    Procrastination and school got the best of me
+    Anyway Hope you learned something!
+</p>
+
 </section>
