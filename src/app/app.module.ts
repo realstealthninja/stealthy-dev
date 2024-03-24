@@ -31,7 +31,6 @@ import { InabilityToCompleteComponent } from './blogs/inability-to-complete/inab
     BlogsComponent,
     WhyStealthyDevComponent,
     MyTimeAtGbotComponent,
-    InabilityToCompleteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, HighlightJsModule],
   providers: [],
