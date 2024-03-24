@@ -12,9 +12,13 @@ import { HomeComponent } from "./home/home.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { LinksComponent } from "./links/links.component";
 import { ContactCardComponent } from "./contact-card/contact-card.component";
-import { BlogsComponent } from './blogs/blogs.component';
-import { WhyStealthyDevComponent } from './blogs/why-stealthy-dev/why-stealthy-dev.component';
-import { MyTimeAtGbotComponent } from './blogs/my-time-at-gbot/my-time-at-gbot.component';
+import { BlogsComponent } from './writing/blogs.component';
+import { WhyStealthyDevComponent } from './writing/blogs/why-stealthy-dev/why-stealthy-dev.component';
+import { MyTimeAtGbotComponent } from './writing/blogs/my-time-at-gbot/my-time-at-gbot.component';
+import { AGrandOldOakComponent } from './writing/poetry/a-grand-old-oak/a-grand-old-oak.component';
+import { BigBrightStarComponent } from './writing/poetry/big-bright-star/big-bright-star.component';
+import { HouseOnAHillComponent } from './writing/poetry/house-on-a-hill/house-on-a-hill.component';
+import { StarsLakesideComponent } from './writing/poetry/stars-lakeside/stars-lakeside.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { MyTimeAtGbotComponent } from './blogs/my-time-at-gbot/my-time-at-gbot.c
     BlogsComponent,
     WhyStealthyDevComponent,
     MyTimeAtGbotComponent,
+    AGrandOldOakComponent,
+    BigBrightStarComponent,
+    HouseOnAHillComponent,
+    StarsLakesideComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, HighlightJsModule],
   providers: [],

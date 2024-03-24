@@ -47,7 +47,7 @@ button {
   text-decoration: none;
 }
 
-.blog {
+.writing {
   margin: 2rem;
   padding: 2rem;
   border: solid 0.255rem;
@@ -55,16 +55,16 @@ button {
   color: var(--text);
 }
 
-.blog>p>a {
+.writing>p>a {
   color: var(--primary);
   text-decoration: underline;
 }
 
-.blog>h4 {
+.writing>h4 {
   color: white;
 }
 
-.blog>header>h2 {
+.writing>header>h2 {
   text-align: center;
   color: white;
 }
