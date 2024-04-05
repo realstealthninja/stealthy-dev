@@ -1,45 +1,42 @@
-main > div {
+.title-logo {
+  font-size: .775rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin-inline: 1rem;
-}
-.heading {
-  display: flex;
   align-items: center;
-  justify-content: center;
-}
-.heading > h1 {
-  outline: solid;
-  outline-color: rgba(var(--light-pink), 0.5);
-  outline-offset: -0.5rem;
-  background-color: rgba(var(--midnight-violet), 0.7);
-  color: rgba(var(--dark-pink), 0.5);
-  text-align: center;
-  padding: 0.4rem;
-}
-.heading > p {
-  outline: solid;
-  outline-color: rgba(var(--midnight-violet), 0.3);
-  outline-offset: -0.3rem;
-  background-color: rgba(var(--dark-pink), 0.5);
-  padding: 0.4rem;
-  margin-left: 0.5rem;
-  color: rgba(var(--midnight-violet));
-}
-article {
-  background-color: rgba(var(--midnight-violet), .8);
-  color: rgba(var(--dark-pink), 0.5);
-  font-size: large;
-  margin: 1rem;
+  height: 5rem;
+  background: linear-gradient(
+    to bottom right,
+    rgba(var(--midnight-violet), 0.8),
+    rgba(var(--dark-violet), 0.8)
+  );
+  border: solid;
+  color: rgb(var(--light-pink));
+  border-width: 0.5rem;
   padding: 1rem;
-
-  outline-color: rgba(var(--dark-pink), 0.1);
-  outline: solid;
-  outline-offset: -0.5rem;
+  margin: 2rem;
 }
-li {
-  list-style: circle;
-  margin-bottom: 0.5rem;
+@media screen and (min-width: 991px) {
+  .title-logo{
+    font-size: 2rem;
+  }
+}
+
+article {
+
+  border: solid;
+  border-width: 0.225rem; 
+  color: var(--text);
+  background-color: rgba(67, 42, 98, 0.80);
+  margin: 2rem;
+  text-align: left;
+}
+
+article > h2 {
+  color: white;
+  text-align: center;
+}
+
+article > p {
+  width: 88ch;
+  padding: 2rem;
 }

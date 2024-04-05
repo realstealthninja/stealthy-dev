@@ -53,6 +53,7 @@ button {
   border: solid 0.255rem;
   background-color: rgba(67, 42, 98, 0.50);
   color: var(--text);
+  overflow-y: scroll;
 }
 
 .writing>p>a {
