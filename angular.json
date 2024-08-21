@@ -89,7 +89,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/atom-highlit.css"
+              "src/atom-highlight.css"
             ],
             "scripts": []
           }
