@@ -1,42 +1,51 @@
-.title-logo {
-  font-size: .775rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-  background: linear-gradient(
+section {
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    margin-inline: 1rem;
+    margin-block: 1rem;
+    
+}
+
+header {
+    background: linear-gradient(
     to bottom right,
     rgba(var(--midnight-violet), 0.8),
     rgba(var(--dark-violet), 0.8)
-  );
-  border: solid;
-  color: rgb(var(--light-pink));
-  border-width: 0.5rem;
-  padding: 1rem;
-  margin: 2rem;
-}
-@media screen and (min-width: 991px) {
-  .title-logo{
-    font-size: 2rem;
-  }
+    );
+    border: solid;
+    padding: 0.5rem;
 }
 
-article {
-
-  border: solid;
-  border-width: 0.225rem; 
-  color: var(--text);
-  background-color: rgba(67, 42, 98, 0.80);
-  margin: 2rem;
-  text-align: left;
+h3 {
+    padding-block: 1rem;
 }
 
-article > h2 {
-  color: white;
-  text-align: center;
+a {
+
+    color:lightblue;
+    text-decoration: underline;
 }
 
-article > p {
-  width: 88ch;
-  padding: 2rem;
+.author {
+    margin: 0px;
+    display: flex;
+    align-items:center;
+    gap: 1rem;
+    background-color: rgba(var(--midnight-violet),0.8);
+    border-radius: 1rem;
+}
+
+figure > img {
+    width: 32px;
+    object-fit: cover;
+    border-radius: 1rem;
+} 
+
+@media screen and (min-width: 900px) {
+    section {
+        margin-inline: 10rem;
+    }
+    
 }
