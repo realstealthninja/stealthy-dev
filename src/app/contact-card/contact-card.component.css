@@ -1,8 +1,8 @@
 .container {
   color: rgba(var(--light-pink), 0.7);
   background-color: rgba(var(--dark-violet), 0.4);
-  height: fill;
-  width: fill;
+  height: stretch;
+  width: stretch;
   padding: 2rem;
   text-align: center;
   text-justify: center;
