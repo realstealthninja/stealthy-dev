@@ -11,24 +11,27 @@ import { MyTimeAtGbotComponent } from "./writing/blogs/my-time-at-gbot/my-time-a
 import { AGrandOldOakComponent } from "./writing/poetry/a-grand-old-oak/a-grand-old-oak.component";
 import { BigBrightStarComponent } from "./writing/poetry/big-bright-star/big-bright-star.component";
 import { HouseOnAHillComponent } from "./writing/poetry/house-on-a-hill/house-on-a-hill.component";
+import { DefaultComponent } from "./writing/default/default.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "about", component: AboutComponent },
-  { path: "projects", component: ProjectsComponent },
-  { path: "contact", component: LinksComponent },
+  { path: "about", component: AboutComponent, title: "about - stealthy dev" },
+  { path: "projects", component: ProjectsComponent, title: "projects - stealthy dev" },
+  { path: "contact", component: LinksComponent, title: "contact - stealthy dev " },
   {
     path: "writing",
+    title: "writing - stealthy dev",
     component: BlogsComponent,
     children: [
-      { path: "why-stealthy-dev", component: WhyStealthyDevComponent },
-      { path: "my-time-at-gbot", component: MyTimeAtGbotComponent },
-      { path: "a-grand-old-oak", component: AGrandOldOakComponent },
-      { path: "big-bright-star", component: BigBrightStarComponent },
-      { path: "house-on-a-hill", component: HouseOnAHillComponent },
+      { path: "why-stealthy-dev", component: WhyStealthyDevComponent, title: "why stealthy dev - blog" },
+      { path: "my-time-at-gbot", component: MyTimeAtGbotComponent, title: "robotics an art worth the money - blog" },
+      { path: "a-grand-old-oak", component: AGrandOldOakComponent, title: "grand old oak - poetry" },
+      { path: "big-bright-star", component: BigBrightStarComponent, title: "big bright star - poetry" },
+      { path: "house-on-a-hill", component: HouseOnAHillComponent, title: "house on a hill - poetry" },
+      { path: "", component: DefaultComponent}
     ]
   },
-  { path: "**", component: PageNotFoundComponent },
+  { path: "**", component: PageNotFoundComponent, title: "404 page found" },
 ];
 
 @NgModule({
