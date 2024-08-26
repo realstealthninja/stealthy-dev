@@ -54,7 +54,8 @@ button {
   padding: 2rem;
   border: solid 0.255rem;
   background-color: rgba(67, 42, 98, 0.50);
-  color: var(--text);
+  color: white;
+  border-color: var(--text);
   overflow-y: scroll;
 }
 
@@ -65,6 +66,11 @@ button {
 
 .writing>h4 {
   color: white;
+}
+
+.writing > h4::before {
+  content: "# ";
+  color: pink;
 }
 
 .writing>header>h2 {

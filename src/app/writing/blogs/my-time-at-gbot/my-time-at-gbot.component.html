@@ -1,6 +1,13 @@
 <section class="writing">
     <header>
-        <h2>Robotics an art worth the money</h2>
+      <h1 id="robotics">Robotics an art worth the money</h1>
+
+      <figure class="author">
+          <img src="assets/stealthninja.png" alt="a poorly drawn excuse for a ninja" >
+          <figcaption><small>Stealthninja</small></figcaption>
+      </figure>
+      <small> written on <b><time datetime="2023-10-15">November 15, 2023</time></b> </small>
+      <hr width="100%">
     </header>
     <p>
         Its quite interesting that i've never really considered robotics until I got an
@@ -11,7 +18,7 @@
             href="https://www.arduino.cc/">Arduinos</a>&ThickSpace; <em> very exciting</em>.
         <br />
         <br />
-    <figure>
+    <figure class="blog-img">
         <img src="https://docs.arduino.cc/static/bbceab04f8e0726194ef4dfe2457097f/image.svg"
             alt="a diagram of an arduino uno R3" width="150" height="150" />
         <figcaption>
@@ -29,7 +36,7 @@
     thus it must covert it to digital in the case of input or convert from digital to analog in the case of output.
     Luckily the board's chip the ATmega328P has builtin functionality of converting to and from analog. This results
     values to be displayed in 10 bits that is 0-1024</p>
-    <h4>What does a arduino file look like?</h4>
+    <h4 id="style-of-arduino-file">What does a arduino file look like?</h4>
 
 <p>
         Good question! An arduino is coded using a file with an extension of .ino usually named something like
@@ -103,19 +110,19 @@ void loop() {
 }
 </textarea>
 </p>
-<h4>Potentiometers</h4>
+<h4 id="potentiometers">Potentiometers</h4>
 <p>
     While looking at LEDs we were introduced a new component potentiometers <em>fancy!</em>
     Potentiometers simply put are variable resistors. The one they showed us was a 10k ohm
     potentiometer. The working of a potentiometer is quite elegant in my opinion. 
     There is a conductive track and wiper, as the wiper rotates the resistance varies
     as you know length is proportional to resistance, by varing the lenght of the conductive track using the pin you decrease / increase the resistance! <em>How cool!!!</em>
-    <figure>
+    <figure class="blog-img">
         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210919142132/PSX20210919141957.jpg" alt="diagram of potentiometer" width="250"  >
         <figcaption><cite>potentiometer diagram</cite> from geeksforgeeks.org</figcaption>
     </figure>
 </p>
-        <h4>Motors, Motor controllers</h4>
+        <h4 id ="motors">Motors, Motor controllers</h4>
         <p>After a brief lunch break we were tasked with creating a little car thing. It was a simple enough project because they had already done most of the wiring and left us with the coding. Since now you all are experts in doing embedded c. I'll leave you with the entire file
 <textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
@@ -233,7 +240,7 @@ void backward(int time) {
 }
     </textarea>
 </p>
-<h4>Thank you for reading!</h4>
+<h4 id="thank-you">Thank you for reading!</h4>
 <p>I wish I could go more indepth but this blog has been in the works since last year (2023).
     Procrastination and school got the best of me
     Anyway Hope you learned something!
