@@ -8,14 +8,25 @@ main {
 
 nav {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(var(--midnight-violet));
-  flex-shrink: 0;
-  width: 10rem;
+  min-width: 10rem;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-nav > h5 {
+nav > section > h5 {
   text-align: center;
 }
+nav > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 .nav-items {
   display: flex;
@@ -23,6 +34,8 @@ nav > h5 {
   align-items: center;
   justify-content: center;
   padding-inline: 1rem;
+  margin-inline: 1rem;
+  max-width: 8rem;
 }
 
 .nav-items>* {
@@ -51,15 +64,23 @@ button {
   margin: 0px;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 72rem) {
   main {
     flex-direction: column;
   }
 
   nav {
     min-height: 10vh;
-    flex-shrink: initial;
     flex-direction: row;
+    border-block: solid;
+  }
+  
+  nav > section {
+    flex-basis: 50%;
+  }
+  
+  nav > section:first-child {
+    border-right: solid;
   }
 
 }

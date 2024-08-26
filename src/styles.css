@@ -25,6 +25,12 @@ html {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 72rem) {
+  body {
+    min-height: 100vh;
+  }
+}
+
 .grid {
   align-items: center;
   justify-items: center;
