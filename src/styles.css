@@ -71,3 +71,20 @@ button {
   text-align: center;
   color: white;
 }
+
+.author {
+  margin: 0px;
+  display: flex;
+  align-items:center;
+  gap: 1rem;
+  background-color: rgba(var(--midnight-violet),0.8);
+  border-radius: 1rem;
+  width: max-content;
+  padding-inline:0.225rem;
+}
+
+.author > img {
+  width: 32px;
+  object-fit: cover;
+  border-radius: 1rem;
+} 
