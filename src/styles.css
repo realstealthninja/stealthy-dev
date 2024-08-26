@@ -20,7 +20,9 @@ body,
 html {
   margin: 0px;
   border: 0px;
-  background-image: url("https://images.unsplash.com/photo-1567598116074-2bf31f6af491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-image: url("https://images.unsplash.com/photo-1567598116074-2bf31f6af491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .grid {
@@ -52,7 +54,9 @@ button {
   padding: 2rem;
   border: solid 0.255rem;
   background-color: rgba(67, 42, 98, 0.50);
-  color: var(--text);
+  color: white;
+  border-color: var(--text);
+  overflow-y: scroll;
 }
 
 .writing>p>a {
@@ -64,7 +68,29 @@ button {
   color: white;
 }
 
+.writing > h4::before {
+  content: "# ";
+  color: pink;
+}
+
 .writing>header>h2 {
   text-align: center;
   color: white;
 }
+
+.author {
+  margin: 0px;
+  display: flex;
+  align-items:center;
+  gap: 1rem;
+  background-color: rgba(var(--midnight-violet),0.8);
+  border-radius: 1rem;
+  width: max-content;
+  padding-inline:0.225rem;
+}
+
+.author > img {
+  width: 32px;
+  object-fit: cover;
+  border-radius: 1rem;
+} 
