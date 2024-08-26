@@ -1,51 +1,53 @@
 <section class="writing">
-    <header>
-      <h1 id="robotics">Robotics an art worth the money</h1>
+  <header>
+    <h1 id="robotics">Robotics an art worth the money</h1>
 
-      <figure class="author">
-          <img src="assets/stealthninja.png" alt="a poorly drawn excuse for a ninja" >
-          <figcaption><small>Stealthninja</small></figcaption>
-      </figure>
-      <small> written on <b><time datetime="2023-10-15">November 15, 2023</time></b> </small>
-      <hr width="100%">
-    </header>
-    <p>
-        Its quite interesting that i've never really considered robotics until I got an
-        opportunity to do a workshop with the G-Bot team from <a href="https://www.gecwyd.ac.in/">Kalpetta Engineering
-            college</a>.
-        We were teamed based on our schools, So i was teamed with my class mate. I arrived early to setup our linux box
-        and installed arduino IDE. Did I mention that we were working with <a
-            href="https://www.arduino.cc/">Arduinos</a>&ThickSpace; <em> very exciting</em>.
-        <br />
-        <br />
-    <figure class="blog-img">
-        <img src="https://docs.arduino.cc/static/bbceab04f8e0726194ef4dfe2457097f/image.svg"
-            alt="a diagram of an arduino uno R3" width="150" height="150" />
-        <figcaption>
-            This lil tiny board can do so many cool things.
-            point your attention to the Chip. That's a ATmega328P right there.
-        </figcaption>
+    <figure class="author">
+      <img src="assets/stealthninja.png" alt="a poorly drawn excuse for a ninja">
+      <figcaption><small>Stealthninja</small></figcaption>
     </figure>
-    They introduced us to Arduino, A single board micro-controller. basically a programmable PCB. An arduino works on
-    variant of
-    C. I prefer to call it embeded C but that's probably <em> Very wrong</em>.
-    There are 14 digital pins and 6 analog pins. Whats the difference?
-    A digital pin is digital meaning it can input or output a fixed value in the form of a square wave; Either 0 or 1
-    (on or off or high or low). While an analog pin can input a wide range of values in the form of a sine wave think of
-    it was values from 0 to 1 (eg: 0.34). An arduino is a digital board and cant directly input or ouput analog values
-    thus it must covert it to digital in the case of input or convert from digital to analog in the case of output.
-    Luckily the board's chip the ATmega328P has builtin functionality of converting to and from analog. This results
-    values to be displayed in 10 bits that is 0-1024</p>
-    <h4 id="style-of-arduino-file">What does a arduino file look like?</h4>
+    <small> written on <b><time datetime="2023-10-15">November 15, 2023</time></b></small>
+    <br>
+    <small>Reading time: 5 mins</small>
+    <hr width="100%">
+  </header>
+  <p>
+    It's quite interesting that I never considered robotics until I got an
+    opportunity to do a workshop with the G-Bot team from <a href="https://www.gecwyd.ac.in/">Kalpetta Engineering
+      College</a>.
+    We were teamed based on our schools, So I was paired up with my classmate. I arrived early to set up our Linux box
+    and installed Arduino IDE. Did I mention that we were working with <a href="https://www.arduino.cc/">Arduinos</a>
+    <em> very exciting!</em>
+    <br />
+    <br />
+  <figure class="blog-img">
+    <img src="https://docs.arduino.cc/static/bbceab04f8e0726194ef4dfe2457097f/image.svg"
+      alt="a diagram of an arduino uno R3" width="150" height="150" />
+    <figcaption>
+      This lil tiny board can do so many cool things.
+      point your attention to the Chip. That's an ATmega328P right there.
+    </figcaption>
+  </figure>
+  They introduced us to Arduino, A single-board microcontroller. It's Basically a programmable PCB. An Arduino works on
+  a variant of
+  C. I prefer to call it embedded C but that's probably <em> Very wrong</em>.
+  There are 14 digital pins and 6 analog pins. What's the difference?
+  A digital pin is digital meaning it can input or output a fixed value in the form of a square wave; Either 0 or 1
+  (on or off or high or low). While an analog pin can input a wide range of values in the form of a sine wave think of
+  it as values from 0 to 1 (eg: 0.34). An Arduino is a digital board and can't directly input or output analog values
+  thus it must convert it to digital in the case of input or convert from digital to analog in the case of output.
+  Luckily the board's chip the ATmega328P has built-in functionality for converting to and from analog. This results
+  in values to be displayed in 10 bits that is 0-1024</p>
+  <h4 id="style-of-arduino-file">What does an Arduino file look like?</h4>
 
-<p>
-        Good question! An arduino is coded using a file with an extension of .ino usually named something like
-        sketch&LeftAngleBracket;somenumber&RightAngleBracket;.ino which has two parts a <em>setup function</em> and a
-        <em>loop function</em>.
-        The setup function runs the code inside only ONCE and the loop function as you've guessed it runs it in a loop
-        until the end of time or until you power the arduino off.
+  <p>
+    Good question! An Arduino is programmed using a file with an extension of .ino usually named something like
+    sketch&LeftAngleBracket;somenumber&RightAngleBracket;.ino which has two parts a <em>setup function</em> and a
+    <em>loop function</em>.
+    The setup function runs the code inside only ONCE and the loop function as you've guessed it runs it in a loop
+    until the end of time or until you power the Arduino off.
 
-        <textarea highlight-js [lang]="'arduino'">
+    <textarea highlight-js [lang]="'arduino'">
 /**
  * sketch.ino
  */
@@ -60,12 +62,12 @@ void loop() {
 }
     </textarea>
 
-        If you look carefully you'll see a tiny LED on the 13th pin. You might be wondering how we even begin to light
-        it. Well it starts off by setting how the pin should operate. Since a LED is usually either on or off we connect
-        it to a Digital pin. Now we must inform the board that we are trying to OUTPUT a signal to pin 13. Hence we
-        must set the mode of the pin to "OUTPUT" using the built in function called pinMode
+    If you look carefully you'll see a tiny LED on the 13th pin. You might be wondering how we even begin to light
+    it. Well, it starts by setting how the pin should operate. Since a LED is usually either on or off we connect
+    it to a Digital pin. Now we must inform the board that we are trying to OUTPUT a signal to pin 13. Hence we
+    must set the mode of the pin to "OUTPUT" using the built-in function called pinMode
 
-<textarea highlight-js [options]="{}" [lang]="'arduino'">
+    <textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
  * setting pinmode to OUTPUT
  */
@@ -79,18 +81,18 @@ void loop() {
 }
 </textarea>
 
-        To send an ON signal to that pin we use the builtin function called "digitalWrite" in our loop to turn it and
-        make it stay on forever.
+    To send an ON signal to that pin we use the built-in function called "digitalWrite" in our loop to turn it and
+    make it stay on forever.
 
-        To blink a given led you must add a delay.
-        a delay works as follows, it asks the board to wait a while before executing the other code. For example if you
-        wanted to turn off the LED you might try to
-        add <textarea highlight-js [lang]="'arduino'">digitalWrite(13, LOW);</textarea> which would blink the LED yes
-        but it would be invisible as it is in a loop it blinks at microsecond intervals basically per cpu clock. To
-        avoid this we use a delay so the code gets a chance to be executed and waits a bit before executing the other
-        parts. For ease of access I have moved this to a tiny function
+    To blink a given LED you must add a delay.
+    a delay works as follows, it asks the board to wait a while before executing the other code. For example, if you
+    wanted to turn off the LED you might try to
+    add <textarea highlight-js [lang]="'arduino'">digitalWrite(13, LOW);</textarea> which would blink the LED yes
+    but it would be invisible as it is in a loop it blinks at microsecond intervals basically per CPU clock. To
+    avoid this we use a delay so the code gets a chance to be executed and waits a bit before executing the other
+    parts. For ease of access, I have moved this to a tiny function
 
-<textarea highlight-js [options]="{}" [lang]="'arduino'">
+    <textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
  * @brief Lights the LED with the given pin number
  * @param num the pin number to light
@@ -109,27 +111,31 @@ void loop() {
     light_led(13);
 }
 </textarea>
-</p>
-<h4 id="potentiometers">Potentiometers</h4>
-<p>
-    While looking at LEDs we were introduced a new component potentiometers <em>fancy!</em>
+  </p>
+  <h4 id="potentiometers">Potentiometers</h4>
+  <p>
+    While looking at LEDs we were introduced to a new component potentiometer <em>fancy!</em>
     Potentiometers simply put are variable resistors. The one they showed us was a 10k ohm
-    potentiometer. The working of a potentiometer is quite elegant in my opinion. 
+    potentiometer. The working of a potentiometer is quite elegant in my opinion.
     There is a conductive track and wiper, as the wiper rotates the resistance varies
-    as you know length is proportional to resistance, by varing the lenght of the conductive track using the pin you decrease / increase the resistance! <em>How cool!!!</em>
-    <figure class="blog-img">
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210919142132/PSX20210919141957.jpg" alt="diagram of potentiometer" width="250"  >
-        <figcaption><cite>potentiometer diagram</cite> from geeksforgeeks.org</figcaption>
-    </figure>
-</p>
-        <h4 id ="motors">Motors, Motor controllers</h4>
-        <p>After a brief lunch break we were tasked with creating a little car thing. It was a simple enough project because they had already done most of the wiring and left us with the coding. Since now you all are experts in doing embedded c. I'll leave you with the entire file
-<textarea highlight-js [options]="{}" [lang]="'arduino'">
+    as you know length is proportional to resistance, by varying the length of the conductive track using the pin you
+    decrease / increase the resistance! <em>How cool!!!</em>
+  <figure class="blog-img">
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210919142132/PSX20210919141957.jpg"
+      alt="diagram of potentiometer" width="250">
+    <figcaption><cite>potentiometer diagram</cite> from geeksforgeeks.org</figcaption>
+  </figure>
+  </p>
+  <h4 id="motors">Motors, Motor controllers</h4>
+  <p>After a brief lunch break, we were tasked with creating a little car thing. It was a simple enough project because
+    they had already done most of the wiring and left us with the coding. Since now you all are experts in doing
+    embedded c. I'll leave you with the entire file
+    <textarea highlight-js [options]="{}" [lang]="'arduino'">
 /**
  * @file
  * @brief programmable car
  * @description
- * These files were coded during the Gbot Robotics workshop.
+ * These files were programmed during the Gbot Robotics workshop.
  * Minimal adjustments were made after the workshop to document the structure
   */
    
@@ -239,11 +245,11 @@ void backward(int time) {
   delay(time);
 }
     </textarea>
-</p>
-<h4 id="thank-you">Thank you for reading!</h4>
-<p>I wish I could go more indepth but this blog has been in the works since last year (2023).
-    Procrastination and school got the best of me
+  </p>
+  <h4 id="thank-you">Thank you for reading!</h4>
+  <p>I wish I could go more in-depth but this blog has been in the works since last year (2023).
+    Procrastination and school got the best of me,
     Anyway Hope you learned something!
-</p>
+  </p>
 
 </section>
