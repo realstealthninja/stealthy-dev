@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { HttpClientModule } from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HighlightJsModule } from 'ngx-highlight-js';
@@ -20,27 +20,23 @@ import { BigBrightStarComponent } from './writing/poetry/big-bright-star/big-bri
 import { HouseOnAHillComponent } from './writing/poetry/house-on-a-hill/house-on-a-hill.component';
 import { StarsLakesideComponent } from './writing/poetry/stars-lakeside/stars-lakeside.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavBarComponent,
-    CardComponent,
-    AboutComponent,
-    PageNotFoundComponent,
-    HomeComponent,
-    ProjectsComponent,
-    LinksComponent,
-    ContactCardComponent,
-    BlogsComponent,
-    WhyStealthyDevComponent,
-    MyTimeAtGbotComponent,
-    AGrandOldOakComponent,
-    BigBrightStarComponent,
-    HouseOnAHillComponent,
-    StarsLakesideComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, HighlightJsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        NavBarComponent,
+        CardComponent,
+        AboutComponent,
+        PageNotFoundComponent,
+        HomeComponent,
+        ProjectsComponent,
+        LinksComponent,
+        ContactCardComponent,
+        BlogsComponent,
+        WhyStealthyDevComponent,
+        MyTimeAtGbotComponent,
+        AGrandOldOakComponent,
+        BigBrightStarComponent,
+        HouseOnAHillComponent,
+        StarsLakesideComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule, AppRoutingModule, HighlightJsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
