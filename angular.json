@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "stealthy-dev:build:production"
+              "buildTarget": "stealthy-dev:build:production"
             },
             "development": {
-              "browserTarget": "stealthy-dev:build:development"
+              "buildTarget": "stealthy-dev:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "stealthy-dev:build"
+            "buildTarget": "stealthy-dev:build"
           }
         },
         "test": {
