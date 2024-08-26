@@ -1,30 +1,28 @@
 section {
     color: white;
     
-    padding: 0.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     margin-inline: 1rem;
     margin-block: 1rem;
     border: solid;
-    background: linear-gradient(
-    to bottom right,
-    rgba(var(--midnight-violet), 0.8),
-    rgba(var(--dark-violet), 0.8)
-    );
+    border-color: var(--text);
+    background-color: rgba(67, 42, 98, 0.50);;
     
+}
+
+li {
+    list-style:decimal;
 }
 
 
 h2 {
     text-decoration: underline;
 }
-h3 {
-    padding-block: 1rem;
-}
 
 h3::before {
-    content: "> ";
+    content: "# ";
     color: pink;
 }
 
