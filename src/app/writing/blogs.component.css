@@ -33,9 +33,8 @@ nav > section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-inline: 1rem;
-  margin-inline: 1rem;
   max-width: 8rem;
+  padding-left: 0px;
 }
 
 .nav-items>* {
