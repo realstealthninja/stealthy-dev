@@ -25,11 +25,6 @@ html {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 72rem) {
-  body {
-    min-height: 100vh;
-  }
-}
 
 .grid {
   align-items: center;
@@ -63,6 +58,21 @@ button {
   color: white;
   border-color: var(--text);
   overflow-y: scroll;
+}
+
+
+@media (max-width: 72rem) {
+  body {
+    min-height: 100vh;
+  }
+
+  .writing {
+    margin: 0px;
+    padding: 1rem;
+    max-width: 70rem;
+    overflow-x: scroll;
+  }
+
 }
 
 .writing>p>a {
