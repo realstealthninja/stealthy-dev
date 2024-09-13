@@ -1,4 +1,31 @@
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(6, 240px);
+    grid-template-columns: repeat(2, 240px);
+    gap: 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+.blog-card {
+    cursor: pointer;
+    color: rgb(var(--dark-violet));
+    background-color: rgb(var(--dark-pink));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.blog-card > h3 {
+    width: 100%;
+    margin: 0px;
+    border-bottom: solid;
+}
+
+.blog-card > p {
+    padding: 1rem;
+    margin: 0px;
 }
