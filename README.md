@@ -1,3 +1,5 @@
+> [!NOTE]
+> Project has been archived. Check the new website's page [stealthy.site](https://www.github.com/realstealthninja/stealthysite)
 # StealthyDev
 Welcome to stealthy dev.
 Look around see if you like it.
